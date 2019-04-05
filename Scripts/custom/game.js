@@ -75,7 +75,11 @@ function draw(obj){
   try{
   ctx.beginPath();
   ctx.fillStyle = obj.color;
-  ctx.fillRect(Math.floor(obj.x*10)/10*cellSize,Math.floor(obj.y*10)/10*cellSize,cellSize,cellSize);
+  if(obj.type=="player"){
+    ctx.fillRect(((Math.floor(obj.x*10)/10) *cellSize) + 0.5,((Math.floor(obj.y*10)/10) *cellSize)+0.5,parseInt(cellSize,10) -1,parseInt(cellSize)-0.5);
+  }else{
+    ctx.fillRect(((Math.floor(obj.x*10)/10) *cellSize),((Math.floor(obj.y*10)/10) *cellSize),parseInt(cellSize,10),parseInt(cellSize));
+  }
   ctx.stroke();
   }catch(e){
     console.log(obj);
