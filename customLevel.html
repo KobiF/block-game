@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="CSS/custom.css">
+  </head>
+  <body>
+    <main>
+      <section id="canvasSec">
+        <canvas id="canvas" class="hidden"></canvas>
+      </section>
+      <section id="notCanvas">
+        <form id="levelForm">
+          <p>Input Level Code:</p>
+          <textarea id="levelInput"></textarea>
+          <input type="button" Value="Submit" onClick="validate()">
+          <p id="errbox"></p>
+        </form>
+        <hr noshade>
+        <form id="logInForm">
+          <p>Trying to upload your level requires signing in to Google first.</p>
+          <input type="button" Value="Sign In" onclick="logInWithGoogle()">
+        </form>
+        <form id="submitForm" class="hidden">
+          <p>Thank you for logging in: <span id="name"></span></p>
+          <p>As soon as you complete a level, the button below will allow you to post your level to the community</p>
+          <!--<input type="button" Value="Submit Level" onclick="submit()">-->
+          <p>Unfortunantly this is not available at the moment, sorry.</p>
+        </form>
+        <hr noshade>
+        <section id="links">
+          <a href="index.html">Back to main page</a>
+          <a href="create.html">Create a custom level to play here</a>
+        </section>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBOTLsRSeAlFvyu6-U5AvLCip_WL9YUlo8",
+        authDomain: "platformer-171e9.firebaseapp.com",
+        databaseURL: "https://platformer-171e9.firebaseio.com",
+        projectId: "platformer-171e9",
+        storageBucket: "",
+        messagingSenderId: "921716589129"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="Scripts/custom/things.js"></script>
+    <script src="Scripts/custom/firebaseLogin.js"></script>
+    <script src="Scripts/custom/validateLevel.js"></script>
+    <script src="Scripts/custom/game.js"></script>
+  </body>
+</html>
+
+<!--[[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,4,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,0,0,0,0,0,0,0,2,2,0,0,0,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,0,0,2,2,2,0,0,0,0,0,0,0,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,1,0,0,0,0,0,0,0,0,0,0,0,2],[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]]-->
+
+<!--2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;2,0,0,0,0,0,0,0,0,0,0,0,0,4,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,2,2,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,2,2,2,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,1,0,0,0,0,0,0,0,0,0,0,0,2;2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;40-->
+
+<!--
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;2,2,2,2,2,2,2,0,0,0,0,0,0,0,2;2,2,2,2,2,0,0,0,0,0,0,0,0,0,2;2,2,2,0,0,0,0,0,0,0,0,0,0,4,2;2,2,0,0,0,0,0,0,0,0,0,0,2,2,2;2,0,0,0,0,0,0,0,0,0,0,2,2,2,2;2,0,0,0,0,0,0,0,0,0,2,2,2,2,2;2,0,0,0,0,0,0,0,2,2,2,2,2,2,2;2,0,1,0,0,0,2,2,2,2,2,2,2,2,2;2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;40
+
+-->

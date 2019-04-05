@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="CSS/create.css">
+  </head>
+  <body onmousedown="mouseDown()" onmouseup="mouseUp()">
+    <main>
+      <section id="canvasSec">
+        <canvas id="game" onmousemove="mouseMove(event)" onclick="drawObj(event)"></canvas>
+      </section>
+      <section id="instructions">
+        <h3>Instructions:</h3>
+        <p>Pick a block from below, and then click/drag on the grid to fill in boxes.</p>
+        <p id="err" style="color:red"></p>
+      </section>
+      <section id="inputOutput">
+        <form id="Settings">
+          <label for="rows">Rows:</label>
+          <input type="number" name="rows" id="rows" value="10">
+          <label for="cols">Cols:</label>
+          <input type="number" name="cols" id="cols" value="15">
+          <label for="size">Cell Size (px):</label>
+          <input type="number" name="size" id="size" value="40">
+          <input type="button" onClick="applySettings()" value="Apply Settings">
+          <label>Applying settings resets level.</label>
+        </form>
+        <hr noshade>
+        <form class="noPadding">
+          <input type="button" onClick="getCode()" value="Get Level Code">
+          <input type="text" readonly id="levelCodeOutput" value="Click button to get code">
+        </form>
+        <form class="noPadding">
+          <input type="button" onClick="displayLevel()" value="Start from level code">
+          <input type="text" id="levelCodeInput" placeholder="Paste code here">
+        </form>
+        <hr noshade>
+        <a href="index.html">Back to main page</a>
+        <br>
+        <a href="customLevel.html">Play your level (Copy code first)</a>
+      </section>
+      <section id="blocks"></section>
+    </main>
+    <script src="Scripts/game/things.js"></script>
+    <script src="Scripts/create/draw.js"></script>
+    <script src="Scripts/create/start.js"></script>
+    <script src="Scripts/create/updateLevel.js"></script>
+  </body>
+</html>
