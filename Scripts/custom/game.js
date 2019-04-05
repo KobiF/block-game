@@ -38,6 +38,8 @@ let playerAlive = true;
 let spawnCoords = [];
 let hasKey = false;
 
+let loop;
+
 
 //Get Keystrokes{
 document.addEventListener("keydown", function(event) {
@@ -241,7 +243,6 @@ function phisics(){
   }
 }
 function update(){
-  console.log(player);
   movement();
   clear(player);
   phisics();
@@ -255,6 +256,9 @@ function lose(){
   playerAlive = true;
 }
 function nextLV(){
+  // if (loop !== undefined && loop !== null) {
+  //   loop.clearInterval();
+  // }
   submit();
   getLevel();
   setup();
@@ -327,7 +331,7 @@ function start(){
   levelNum--;
   getLevel();
   setup();
-  window.setInterval(function(){
+  loop = setInterval(function(){
     if(!paused){
       update();
     }
