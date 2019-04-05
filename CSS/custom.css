@@ -1,0 +1,63 @@
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+body{
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+  justify-content:center;
+  background-color:moccasin;
+}
+main{
+  display:grid;
+  padding:20px;
+  grid-template-columns:2fr 1fr;
+  grid-template-areas:"canvas notCanvas" "canvas links";
+  grid-gap:10px
+}
+form{
+  /*border:1px solid black;*/
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+  justify-content:center;
+  padding:5px;
+}
+form>*{
+  margin:5px;
+}
+#links{
+  display:flex;
+  flex-flow:column nowrap;
+  text-align:center;
+  padding:10px;
+  grid-area:links;
+}
+#notCanvas{
+  grid-area:notCanvas;
+  border:1px solid black;
+  background-color:lightgoldenrodyellow;
+}
+#canvasSec{
+  border:1px solid black;
+  background-color:violet;
+}
+canvas{
+  border:1px solid black;
+  background-color:white;
+}
+#errbox{
+  color:red;
+}
+.hidden{
+  display:none;
+}
+
+/*
+
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,1,0,0,0,0,0,0,0,0,0,0,4,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,2,2,2,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,2,2,2,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,0,0,2,2,2,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,3,3,3,3,3,3,3,3,3,3,3,3,3,2;40
+
+
+*/
