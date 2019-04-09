@@ -92,7 +92,7 @@ function draw(obj){
 function clear(obj){
   try{
     ctx.beginPath();
-    ctx.clearRect(Math.floor(obj.x*10)/10*cellSize,Math.floor(obj.y*10)/10*cellSize ,parseInt(cellSize),parseInt(cellSize));
+    ctx.clearRect(Math.floor(obj.x*10)/10*cellSize ,Math.floor(obj.y*10)/10*cellSize ,parseInt(cellSize) +0.5,parseInt(cellSize));
     ctx.stroke();
   }catch(e){
     console.log(obj);
