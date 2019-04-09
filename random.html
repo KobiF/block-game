@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="CSS/custom.css">
+  </head>
+  <body>
+    <main>
+      <section id="canvasSec">
+        <canvas id="canvas" class="hidden"></canvas>
+      </section>
+      <section id="notCanvas">
+        <section id="links">
+          <a href="index.html">Back to main page</a>
+          <a href="create.html">Create a custom level to play here</a>
+          <a href="customLevel.html">Play a chosen Custom Level</a>
+        </section>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBOTLsRSeAlFvyu6-U5AvLCip_WL9YUlo8",
+        authDomain: "platformer-171e9.firebaseapp.com",
+        databaseURL: "https://platformer-171e9.firebaseio.com",
+        projectId: "platformer-171e9",
+        storageBucket: "",
+        messagingSenderId: "921716589129"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="Scripts/random/things.js"></script>
+    <script src="Scripts/random/getLevel.js"></script>
+    <script src="Scripts/random/game.js"></script>
+  </body>
+</html>
+
+<!--[[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,4,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,0,0,0,0,0,0,0,2,2,0,0,0,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,0,0,2,2,2,0,0,0,0,0,0,0,2],[2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],[2,0,1,0,0,0,0,0,0,0,0,0,0,0,2],[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]]-->
+
+<!--2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;2,0,0,0,0,0,0,0,0,0,0,0,0,4,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,2,2,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,0,0,2,2,2,0,0,0,0,0,0,0,2;2,0,0,0,0,0,0,0,0,0,0,0,0,0,2;2,0,1,0,0,0,0,0,0,0,0,0,0,0,2;2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;40-->
+
+<!--
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;2,2,2,2,2,2,2,0,0,0,0,0,0,0,2;2,2,2,2,2,0,0,0,0,0,0,0,0,0,2;2,2,2,0,0,0,0,0,0,0,0,0,0,4,2;2,2,0,0,0,0,0,0,0,0,0,0,2,2,2;2,0,0,0,0,0,0,0,0,0,0,2,2,2,2;2,0,0,0,0,0,0,0,0,0,2,2,2,2,2;2,0,0,0,0,0,0,0,2,2,2,2,2,2,2;2,0,1,0,0,0,2,2,2,2,2,2,2,2,2;2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;40
+
+-->
