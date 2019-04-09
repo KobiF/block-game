@@ -260,10 +260,7 @@ function lose(){
   playerAlive = true;
 }
 function nextLV(){
-  // if (loop !== undefined && loop !== null) {
-  //   loop.clearInterval();
-  // }
-  submit();
+  allowSubmit();
   getLevel();
   setup();
 }

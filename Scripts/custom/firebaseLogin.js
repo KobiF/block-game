@@ -28,6 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     currentUser = user;
     changeForms(user);
+    console.log(user);
   } else {
     // No user is signed in.
   }
@@ -38,8 +39,26 @@ function changeForms(user){
   document.getElementById("name").innerHTML = user.displayName;
   document.getElementById("submitForm").classList.remove("hidden")
 }
-function postLevel(string) {
-  firebase.database().ref('users/' + userId).add({
-    level: string
+function postLevel(level) {
+  console.log(level);
+  console.log(database.ref().child("Users"));
+  firebase.database().ref('levels/' + currentUser.uid).push({
+    username: currentUser.displayName,
+    levels: level,
   });
 }
+
+// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+//   // ...
+// });
+
+
+// function writeUserData(userId, name, email, imageUrl) {
+//   console.log([userId, name, email, imageUrl])
+//   firebase.database().ref('users/' + userId).set({
+//     username: name,
+//     email: email,
+//     profile_picture : imageUrl
+//   });
+// }

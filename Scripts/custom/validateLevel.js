@@ -81,6 +81,12 @@ function validate(){
   start();
 }
 
-function submit(){
-  
+function allowSubmit(){
+  document.getElementById("submitBtn").classList.remove("hidden");
+  document.getElementById("completeLvDesc").classList.add("hidden");
+}
+
+
+function getLevelToPost(){
+  postLevel(levels[0]);
 }
