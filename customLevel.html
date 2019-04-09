@@ -21,14 +21,15 @@
         </form>
         <form id="submitForm" class="hidden">
           <p>Thank you for logging in: <span id="name"></span></p>
-          <p>As soon as you complete a level, the button below will allow you to post your level to the community</p>
-          <!--<input type="button" Value="Submit Level" onclick="submit()">-->
-          <p>Unfortunantly this is not available at the moment, sorry.</p>
+          <p id="completeLvDesc">As soon as you complete a level, the button below will allow you to post your level to the community</p>
+          <input type="button" Value="Submit Level" class="hidden" onclick="getLevelToPost()" id="submitBtn">
+          <!--<p>Unfortunantly this is not available at the moment, sorry.</p>-->
         </form>
         <hr noshade>
         <section id="links">
           <a href="index.html">Back to main page</a>
           <a href="create.html">Create a custom level to play here</a>
+          <a href="random.html">Play a random Custom Level</a>
         </section>
       </section>
     </main>
