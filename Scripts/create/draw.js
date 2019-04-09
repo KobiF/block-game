@@ -34,6 +34,12 @@ function drawObj(e){
     ctx.fillStyle = allObjs[currentBlock].color;
     ctx.fillRect(coords[0]*size+0.5,coords[1]*size+0.5,size,size);
     ctx.stroke();
+    if(currentBlock === 8){
+      ctx.beginPath();
+      ctx.arc((coords[0]+0.5)*size+0.5,(coords[1]+0.5)*size+0.5,size/4,0, 2*Math.PI);
+      ctx.stroke();
+      ctx.closePath();
+    }
     setLevelCoord(coords,currentBlock);
   }
 }
