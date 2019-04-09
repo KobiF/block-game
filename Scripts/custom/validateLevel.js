@@ -77,7 +77,7 @@ function validate(){
   completed = false;
   levels = [];
   levels.push([level,size]);
-  document.getElementById("canvas").classList.remove("hidden")
+  document.getElementById("canvas").classList.remove("hidden");
   start();
 }
 
@@ -88,5 +88,7 @@ function allowSubmit(){
 
 
 function getLevelToPost(){
+  document.getElementById("submitted").classList.remove("hidden");
+  document.getElementById("submitBtn").classList.add("hidden");
   postLevel(levels[0]);
 }
