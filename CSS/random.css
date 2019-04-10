@@ -38,6 +38,10 @@ form>*{
 #notCanvas{
   grid-area:notCanvas;
   border:1px solid black;
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+  justify-content:center;
   background-color:lightgoldenrodyellow;
 }
 #canvasSec{
